@@ -40,9 +40,8 @@
     "css-loader": "~0.25.0"
   },
   "dependencies": {
-    "react-dom": "~15.3.2",
+    "material-design-lite": "^1.2.1",
     "react": "~15.3.2",
-    "bootstrap": "~3.3.7",
-    "react-bootstrap": "~0.30.5"
+    "react-dom": "~15.3.2"
   }
 }
