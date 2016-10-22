@@ -1,0 +1,42 @@
+{
+  "name": "foods",
+  "version": "0.0.0",
+  "description": "Sistema de Delivery Online",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goveiat/foods"
+  },
+  "keywords": [
+    "foods",
+    "comida",
+    "lanche",
+    "almoço",
+    "jantar",
+    "marmita",
+    "delivery",
+    "entrega",
+    "lanchonete",
+    "restaurante"
+  ],
+  "author": "Thiago Goveia",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/goveiat/foods/issues"
+  },
+  "devDependencies": {
+    "webpack": "~1.13.2",
+    "webpack-dev-server": "~1.16.2",
+    "babel-loader": "~6.2.5",
+    "babel-core": "~6.17.0",
+    "babel-preset-es2015": "~6.16.0",
+    "babel-preset-react": "~6.16.0"
+  },
+  "dependencies": {
+    "react-dom": "~15.3.2",
+    "react": "~15.3.2"
+  }
+}
