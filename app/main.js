@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import CSS from './main.css';
 import App from './components/App';
-import cssMD from 'material-design-lite/material.min.css';
-import jsMD from 'material-design-lite/material.min.js';
 
+injectTapEventPlugin();
 
-
-ReactDOM.render(
-        <App />, document.getElementById('app'));
+ReactDOM.render(<MuiThemeProvider><App /></MuiThemeProvider>, document.getElementById('app'));
