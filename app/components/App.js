@@ -1,8 +1,9 @@
 import React from 'react';
-import AppBar from 'material-ui/AppBar';
+import ContainerShop from './ContainerShop';
+import ContainerFooter from './ContainerFooter';
+import ContainerHeader from './ContainerHeader';
 
 export default class App extends React.Component{
-
 
 
     constructor(){
@@ -27,20 +28,18 @@ export default class App extends React.Component{
         return (
             <article>
                 <header>
-                    <AppBar
-                        iconClassNameRight="muidocs-icon-navigation-expand-more"
-                        title={<span style={this.styles.title}>Foods</span>}
-                        onTitleTouchTap={this.gotoHome.bind(this)}
-                      />
+                    <ContainerHeader />
                 </header>
+                <main>
+                    <ContainerShop />
+                </main>
+                <footer>
+                    <ContainerFooter />
+                </footer>
             </article>
         )
     }
 
-    gotoHome(e) {
-        e.preventDefault();
-        alert('Setar a rota para home');
-    }
 
 }
 
