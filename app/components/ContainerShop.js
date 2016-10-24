@@ -13,7 +13,7 @@ export default class ContainerShop extends React.Component{
             floatBtn: {
                 position: 'fixed',
                 bottom: '10px',
-                right: '10px'
+                right: '10px',
             }
         }
     }
