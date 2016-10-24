@@ -2,6 +2,8 @@ import React from 'react';
 import Img from '../img/defaultProduct.png';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
+import estilo from 'material-ui/styles/baseThemes/lightBaseTheme';
+const { primary1Color, accent1Color } = estilo.palette;
 
 export default class Product extends React.Component{
 

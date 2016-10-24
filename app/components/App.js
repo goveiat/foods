@@ -2,6 +2,7 @@ import React from 'react';
 import ContainerShop from './ContainerShop';
 import ContainerFooter from './ContainerFooter';
 import ContainerHeader from './ContainerHeader';
+import Banner from '../img/defaultBanner.jpg';
 
 export default class App extends React.Component{
 
@@ -26,16 +27,16 @@ export default class App extends React.Component{
 
     render(){
         return (
-            <article>
+            <article style={{overflowX : 'hidden'}}>
                 <header>
                     <ContainerHeader />
                 </header>
                 <main>
                     <ContainerShop />
+                    <footer>
+                        <ContainerFooter />
+                    </footer>
                 </main>
-                <footer>
-                    <ContainerFooter />
-                </footer>
             </article>
         )
     }
