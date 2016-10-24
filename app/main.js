@@ -12,6 +12,7 @@ import ContainerSale from './components/ContainerSale';
 import ContainerLogin from './components/ContainerLogin';
 import ContainerAbout from './components/ContainerAbout';
 import ContainerShop from './components/ContainerShop';
+import ContainerTamanho from './components/ContainerTamanho';
 import ContainerDeliveryArea from './components/ContainerDeliveryArea';
 
 
@@ -30,6 +31,7 @@ ReactDOM.render(
                 <Route path="/areaEntrega" component={ContainerDeliveryArea} />
                 <Route path="/entrar" component={ContainerLogin} />
                 <Route path="/sobre" component={ContainerAbout} />
+                <Route path="/tamanho" component={ContainerTamanho} />
                 <Route path="*" component={NotFound} />
             </Route>
         </Router>

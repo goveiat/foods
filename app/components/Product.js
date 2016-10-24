@@ -1,9 +1,10 @@
 import React from 'react';
 import Img from '../img/defaultProduct.png';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import estilo from 'material-ui/styles/baseThemes/lightBaseTheme';
-const { primary1Color, accent1Color } = estilo.palette;
+import {GridTile} from 'material-ui/GridList';
+const { primary1Color, accent4Color } = estilo.palette;
+import {Link} from 'react-router';
 
 export default class Product extends React.Component{
 
@@ -15,17 +16,17 @@ export default class Product extends React.Component{
 
 
     render(){
+        const {title, author, img} = this.props.data;
         return (
-             <Card style={{margin: '20px'}}>
-                <CardMedia>
-                  <img src={Img} />
-                </CardMedia>
-                <CardTitle title="Card title" subtitle="Card subtitle" />
-                <CardActions>
-                  <FlatButton label="Action1" />
-                  <FlatButton label="Action2" />
-                </CardActions>
-              </Card>
+            <Link to="/tamanho">
+             <GridTile
+                style={{background: accent4Color}}
+                title={title}
+                subtitle={<span>by <b>{author}</b></span>}
+            >
+              <img src={img} />
+            </GridTile>
+            </Link>
         )
     }
 

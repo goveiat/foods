@@ -1,6 +1,6 @@
 import React from 'react';
 import Product from './Product';
-import {GridList, GridTile} from 'material-ui/GridList';
+import {GridList} from 'material-ui/GridList';
 import IconButton from 'material-ui/IconButton';
 import Subheader from 'material-ui/Subheader';
 import Img from '../img/defaultProduct.png';
@@ -13,41 +13,49 @@ const tilesData = [
     img: Img,
     title: 'Breakfast',
     author: 'jill111',
+    key: 2
   },
   {
     img: Img,
     title: 'Tasty burger',
     author: 'pashminu',
+    key: 3
   },
   {
     img: Img,
     title: 'Camera',
     author: 'Danson67',
+    key: 4
   },
   {
     img: Img,
     title: 'Morning',
     author: 'fancycrave1',
+    key: 5
   },
   {
     img: Img,
     title: 'Hats',
     author: 'Hans',
+    key: 6
   },
   {
     img: Img,
     title: 'Honey',
     author: 'fancycravel',
+    key: 7
   },
   {
     img: Img,
     title: 'Vegetables',
     author: 'jill111',
+    key: 8
   },
   {
     img: Img,
     title: 'Water plant',
     author: 'BkrmadtyaKarki',
+    key: 1
   },
 ];
 
@@ -82,14 +90,7 @@ export default class ProductList extends React.Component{
                 >
                   <Subheader>December</Subheader>
                   {tilesData.map((tile) => (
-                    <GridTile
-                        style={{background: accent4Color}}
-                      title={tile.title}
-                      key={tile.title}
-                      subtitle={<span>by <b>{tile.author}</b></span>}
-                    >
-                      <img src={tile.img} />
-                    </GridTile>
+                    <Product data={tile} key={tile.key} />
                   ))}
                 </GridList>
               </article>
