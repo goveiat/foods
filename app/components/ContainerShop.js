@@ -1,6 +1,6 @@
 import React from 'react';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
-import FontIcon from 'material-ui/FontIcon';
+import ActionShoppingCart from 'material-ui/svg-icons/action/shopping-cart';
 import ProductList from './ProductList';
 import {Link, IndexLink} from 'react-router';
 
@@ -25,7 +25,7 @@ export default class ContainerShop extends React.Component{
                 <ProductList />
                 <Link to="/carrinho">
                     <FloatingActionButton secondary={true} style={this.styles.floatBtn} >
-                            <FontIcon className="material-icons">shopping_cart</FontIcon>
+                        <ActionShoppingCart  />
                     </FloatingActionButton>
                 </Link>
             </section>

@@ -1,11 +1,9 @@
 import React from 'react';
-
 export default class ContainerCart extends React.Component{
 
     constructor(){
         super();
         this.state = {}
-        this.styles = {}
     }
 
 
@@ -13,6 +11,7 @@ export default class ContainerCart extends React.Component{
         return (
             <section>
                 carrinho
+
             </section>
         )
     }
