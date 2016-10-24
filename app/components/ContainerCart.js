@@ -12,7 +12,7 @@ export default class ContainerCart extends React.Component{
     render(){
         return (
             <section>
-
+                carrinho
             </section>
         )
     }

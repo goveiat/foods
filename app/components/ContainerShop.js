@@ -2,6 +2,7 @@ import React from 'react';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import FontIcon from 'material-ui/FontIcon';
 import ProductList from './ProductList';
+import {Link, IndexLink} from 'react-router';
 
 export default class ContainerShop extends React.Component{
 
@@ -22,9 +23,11 @@ export default class ContainerShop extends React.Component{
         return (
             <section>
                 <ProductList />
-                <FloatingActionButton secondary={true} style={this.styles.floatBtn} >
-                        <FontIcon className="material-icons">shopping_cart</FontIcon>
-                </FloatingActionButton>
+                <Link to="/carrinho">
+                    <FloatingActionButton secondary={true} style={this.styles.floatBtn} >
+                            <FontIcon className="material-icons">shopping_cart</FontIcon>
+                    </FloatingActionButton>
+                </Link>
             </section>
         )
     }

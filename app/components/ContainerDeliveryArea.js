@@ -12,7 +12,7 @@ export default class ContainerDeliveryArea extends React.Component{
     render(){
         return (
             <section>
-
+                entrega
             </section>
         )
     }

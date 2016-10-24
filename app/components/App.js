@@ -4,6 +4,7 @@ import ContainerFooter from './ContainerFooter';
 import ContainerHeader from './ContainerHeader';
 import Banner from '../img/defaultBanner.jpg';
 
+
 export default class App extends React.Component{
 
 
@@ -32,7 +33,7 @@ export default class App extends React.Component{
                     <ContainerHeader />
                 </header>
                 <main>
-                    <ContainerShop />
+                    {this.props.children}
                     <footer>
                         <ContainerFooter />
                     </footer>

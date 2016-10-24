@@ -8,6 +8,7 @@ import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+import {Link, IndexLink} from 'react-router';
 
 import estilo from 'material-ui/styles/baseThemes/lightBaseTheme';
 const { primary1Color, accent1Color } = estilo.palette;
@@ -26,9 +27,7 @@ export default class ContainerHeader extends React.Component{
         return (
             <section>
                 <AppBar
-                    iconClassNameRight="muidocs-icon-navigation-expand-more"
-                    title={<span>Tsuru</span>}
-                    onTitleTouchTap={this.gotoHome.bind(this)}
+                    title={<IndexLink to="/">Tsuru</IndexLink>}
                     onLeftIconButtonTouchTap={this.toggleDrawer.bind(this)}
                     iconElementRight={
                             <IconMenu
@@ -55,19 +54,15 @@ export default class ContainerHeader extends React.Component{
                                 <img src={Logo} style={{width: '90px', marginTop: '35px'}} />
                               </div>
 
-                        <MenuItem onTouchTap={this.closeDrawer.bind(this)}>Carrinho</MenuItem>
-                        <MenuItem onTouchTap={this.closeDrawer.bind(this)}>Promoções</MenuItem>
-                        <MenuItem onTouchTap={this.closeDrawer.bind(this)}>Locais de Entrega</MenuItem>
-                        <MenuItem onTouchTap={this.closeDrawer.bind(this)}>Entrar</MenuItem>
-                        <MenuItem onTouchTap={this.closeDrawer.bind(this)}>Quem Somos</MenuItem>
+                        <Link to="/carrinho"><MenuItem onTouchTap={this.closeDrawer.bind(this)}>Carrinho</MenuItem></Link>
+                        <IndexLink to="/"><MenuItem onTouchTap={this.closeDrawer.bind(this)}>Cardápio</MenuItem></IndexLink>
+                        <Link to="/promocoes"><MenuItem onTouchTap={this.closeDrawer.bind(this)}>Promoções</MenuItem></Link>
+                        <Link to="/areaEntrega"><MenuItem onTouchTap={this.closeDrawer.bind(this)}>Locais de Entrega</MenuItem></Link>
+                        <Link to="/entrar"><MenuItem onTouchTap={this.closeDrawer.bind(this)}>Entrar</MenuItem></Link>
+                        <Link to="/sobre"><MenuItem onTouchTap={this.closeDrawer.bind(this)}>Quem Somos</MenuItem></Link>
                     </Drawer>
             </section>
         )
-    }
-
-    gotoHome(e) {
-        e.preventDefault();
-        alert('Setar a rota para home');
     }
 
     toggleDrawer(e) {

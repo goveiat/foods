@@ -12,7 +12,7 @@ export default class ContainerSale extends React.Component{
     render(){
         return (
             <section>
-
+                promos
             </section>
         )
     }

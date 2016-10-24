@@ -85,6 +85,7 @@ export default class ProductList extends React.Component{
                     <GridTile
                         style={{background: accent4Color}}
                       title={tile.title}
+                      key={tile.title}
                       subtitle={<span>by <b>{tile.author}</b></span>}
                     >
                       <img src={tile.img} />
