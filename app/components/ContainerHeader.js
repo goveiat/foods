@@ -1,6 +1,5 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
-import Banner from '../img/defaultBanner.jpg';
 import Logo from '../img/defaultLogo.jpg';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Drawer from 'material-ui/Drawer';
